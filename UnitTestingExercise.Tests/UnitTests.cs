@@ -12,54 +12,54 @@ namespace UnitTestingExercise.Tests
             //Start Step 3 here:
 
             //Arrange
-            // create a Calculator object
-            
+            var test = new Calculator();// create a Calculator object
+
 
             //Act
-                // call the Add method that is located in the Calculator class
+            var actual = test.Add(num1, num2, num3); // call the Add method that is located in the Calculator class
                 // and store its result in a variable named actual
 
             //Assert
-                //Assert.Equal(expected, actual);
+                Assert.Equal(expected, actual);
         }
 
         [Theory]
-        [InlineData()]//Add test data <-------
+        [InlineData(4, 2, 2)]//Add test data <-------
         public void SubtractTest(int minuend, int subtrhend, int expected)
         {
             //Start Step 5 here:
 
-            //Arrange
+            var test = new Calculator();//Arrange
 
-            //Act
+            var actual = test.Subtract(minuend, subtrhend);//Act
 
-            //Assert
+            Assert.Equal(expected, actual);//Assert
 
         }
 
         [Theory]
-        [InlineData()]//Add test data <-------
+        [InlineData(2 , 5, 10)]//Add test data <-------
         public void MultiplyTest(int num1, int num2, int expected)
         {
             //Start Step 7 here:
 
-            //Arrange
+            var test = new Calculator();//Arrange
 
-            //Act
+            var actual = test.Multiply(num1, num2);//Act
 
-            //Assert
+            Assert.Equal(expected, actual);//Assert
 
         }
 
         [Theory]
-        [InlineData()]//Add test data <-------
+        [InlineData(20 , 5 , 4)]//Add test data <-------
         public void DivideTest(int num1, int num2, int expected)
         {
-            //Arrange
+            var test = new Calculator();//Arrange
 
-            //Act
+            var actual = test.Divide(num1, num2);//Act
 
-            //Assert
+            Assert.Equal(expected, actual);//Assert
 
         }
 
